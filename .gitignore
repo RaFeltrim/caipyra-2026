@@ -1,0 +1,17 @@
+# Caipyra 2026 - Root Git Ignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini

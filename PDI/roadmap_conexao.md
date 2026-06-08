@@ -35,7 +35,8 @@ Este documento conecta os objetivos de carreira de curto, médio e longo prazo d
 4. **Engenharia de Software**: Clean Architecture, Clean Code e Princípios SOLID.
 
 ### Soft Skills
-1. **Acomodação e Autogestão de TDAH/ADHD**: Desenvolvimento de estratégias para ambientes corporativos e exames de certificação remotos/proctorados, mitigando riscos de cancelamento e melhorando o foco.
+1. Acomodação e Autogestão de TDAH/ADHD: Desenvolvimento de estratégias para ambientes corporativos e exames de certificação remotos/proctorados, mitigando riscos de cancelamento e melhorando o foco.
+2. Comunicação Técnica e Síntese de Valor: Adoção do formato de Lightning Talk (5 minutos) baseado nos conceitos do TethaFlow para apresentações de sprint demos e resumos executivos.
 
 ---
 
@@ -84,6 +85,7 @@ A tabela abaixo conecta as atividades e palestras do Caipyra 2026 com os objetiv
 | **APIs e Clean Architecture** *(Tema de conexão do evento)* | Padrões arquiteturais limpos aplicados em serviços web. | **Refatoração de Arquitetura**: Fornece os pilares práticos para a reestruturação do `MKP Manager` e `Agenda QA`, alinhando-se aos pré-requisitos do ICMC-USP. |
 | **Ecossistema Téo Me Why: Comunidade** | Visão de comunidade, educação e colaboração em dados/IA. | **Networking**: Expansão de conexões com profissionais de engenharia de dados nacionais, aumentando a rede de apoio profissional. |
 | **Encerramento e Q&A**<br>*(Gabu Bellon - Lead Data Engineer na phData)* | Insights de carreira em dados, tendências globais e indicação de materiais recomendados. | **Transição Profissional**: Entendimento do mercado internacional e melhores práticas de Engenharia e Qualidade de Dados. |
+| **TethaFlow**<br>*(Lightning Talk)* | Foco em agilidade, entrega rápida e valor direto para a comunidade em apresentações curtas de 5 minutos. | **Comunicação Técnica**: Adoção do formato de Lightning Talk para melhorar a síntese de valor e a clareza na comunicação técnica, ideal para apresentações de sprint demos rápidas no PDI. |
 
 ---
 

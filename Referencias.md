@@ -64,6 +64,9 @@ Este documento reúne todos os links úteis, materiais de estudo, documentaçõe
 - **Código em Javascript**: [bit.ly/gee-caipyra](https://bit.ly/gee-caipyra) - Scripts GEE interativos.
 - **Código em Python**: [bit.ly/gee-python-caipyra](https://bit.ly/gee-python-caipyra) - Notebooks Python interativos.
 
+### Palestra 11 - TethaFlow
+- **TethaFlow Context**: Foco em agilidade, entrega rápida e valor direto para a comunidade em apresentações de sprint demos rápidas no PDI.
+
 ---
 
 ## 🛠️ Ferramentas e Bibliotecas Recomendadas

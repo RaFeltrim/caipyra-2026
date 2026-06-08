@@ -1,0 +1,21 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: TethaFlow
+TIPO: Lightning Talk / Documentação Completa (5 minutos)
+================================================================================
+
+1. VISÃO GERAL
+Esta documentação reúne as informações da lightning talk "TethaFlow" apresentada no Caipyra 2026. Trata-se de uma apresentação relâmpago de 5 minutos com foco em demonstrar como a agilidade, a entrega incremental rápida e o foco em valor direto e comunicação objetiva criam impacto imediato na comunidade de desenvolvimento de software.
+
+2. CONCEITOS E DIRETRIZES
+- Lightning Talk: Formato de apresentação dinâmico de 5 minutos, projetado para transmitir um conceito chave de forma concisa e direta, sem rodeios ou excesso de detalhes técnicos secundários.
+- Foco em Entrega de Valor: A importância de sintetizar conceitos técnicos complexos para comunicação eficaz de progresso em rituais ágeis (como sprint reviews e demonstrações de marcos).
+- Impacto na Comunidade: Discussão sobre como a agilidade técnica capacita e engaja times de desenvolvimento, maximizando o retorno sobre o investimento em software.
+
+3. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- soft_skills: Comunicação objetiva, síntese técnica, metodologias ágeis.
+- Conexão Direta: A lightning talk do TethaFlow inspira a adoção de técnicas de comunicação mais dinâmicas e focadas em valor. No PDI de transição de carreira e nos processos seletivos internacionais (onde a clareza e síntese são chaves), aplicar o conceito de lightning talks de 5 minutos para demonstrar melhorias em sprints e demos técnicas melhora significativamente a visibilidade profissional do usuário.
+- Itens de Ação Relacionados:
+  * Demonstrações de Sprint: Utilizar o formato TethaFlow para estruturar apresentações de progresso rápidas e focadas nas próximas entregas técnicas do repositório.

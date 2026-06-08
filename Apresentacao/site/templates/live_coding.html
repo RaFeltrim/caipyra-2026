@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Live-Coding Playground - Caipyra 2026{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto space-y-10">
+    <!-- Header -->
+    <div class="space-y-3">
+        <span class="badge badge-primary badge-outline text-xs uppercase font-bold tracking-widest font-title">
+            Vibe Coding & SSR
+        </span>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white font-title">
+            Playground de Componentes HTMX
+        </h1>
+        <p class="text-slate-300 leading-relaxed">
+            HTMX nos permite criar aplicações altamente interativas no lado do servidor (SSR) sem a necessidade de frameworks de front-end complexos (como React ou Angular). A lógica permanece no Python (Flask/Django) e a interface é atualizada de forma granular.
+        </p>
+    </div>
+
+    <!-- Interactive Section: Pipeline Audit -->
+    <div class="glass-card rounded-2xl p-8 space-y-6">
+        <div class="space-y-1">
+            <h3 class="text-xl md:text-2xl font-bold text-white font-title">🧪 Validador de Testes de Pipelines de Dados</h3>
+            <p class="text-sm text-slate-400">
+                Selecione o estado simulado do pipeline Snowflake/dbt e execute a validação via requisição POST assíncrona do HTMX.
+            </p>
+        </div>
+
+        <form hx-post="/htmx/check-pipeline" hx-target="#pipeline-result" hx-indicator="#loading-pipeline" class="flex flex-col sm:flex-row items-center gap-4">
+            <div class="form-control w-full sm:w-60">
+                <label class="label">
+                    <span class="label-text text-slate-300 font-medium">Estado do Pipeline</span>
+                </label>
+                <select name="status" class="select select-bordered bg-slate-950 border-slate-700 focus:outline-none text-slate-200">
+                    <option value="healthy">✅ Saudável (0 Inconsistências)</option>
+                    <option value="error">❌ Falha de Dados (Duplicidades)</option>
+                </select>
+            </div>
+            
+            <div class="sm:self-end w-full sm:w-auto">
+                <button type="submit" class="btn btn-primary font-bold w-full sm:w-auto px-6">
+                    Auditar Qualidade do Pipeline
+                </button>
+            </div>
+        </form>
+
+        <div class="relative min-h-[80px] bg-slate-900/40 rounded-xl p-4 flex items-center justify-center border border-slate-800">
+            <!-- Loading Spinner -->
+            <div id="loading-pipeline" class="htmx-indicator absolute inset-0 flex items-center justify-center bg-slate-950/40 rounded-xl">
+                <span class="loading loading-spinner loading-md text-sky-400"></span>
+            </div>
+            
+            <div id="pipeline-result" class="w-full text-center text-slate-500 text-sm">
+                Aguardando execução da auditoria...
+            </div>
+        </div>
+    </div>
+
+    <!-- UI/UX Architecture Tips -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card bg-slate-900/60 border border-slate-800/80 shadow-md">
+            <div class="card-body">
+                <h3 class="card-title text-white font-title font-bold text-lg">📁 Organização de Pastas do Front</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Ter um design system e caminhos bem definidos acelera o desenvolvimento de novas UIs:
+                </p>
+                <pre class="bg-slate-950 p-4 rounded-lg text-xs font-mono text-emerald-400 overflow-x-auto leading-relaxed">
+Apresentacao/site/
+├── templates/
+│   ├── base.html        # Layout global
+│   ├── index.html       # Slides & Trilhas
+│   ├── mainframe.html   # Gemini Ally
+│   └── live_coding.html # Playground
+└── static/              # Estáticos
+                </pre>
+            </div>
+        </div>
+
+        <div class="card bg-slate-900/60 border border-slate-800/80 shadow-md">
+            <div class="card-body space-y-3">
+                <h3 class="card-title text-white font-title font-bold text-lg">💡 Princípio de Localidade de Comportamento</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Ao utilizar **HTMX**, os atributos de rota, gatilhos de clique e alvos de renderização ficam descritos diretamente nas próprias tags HTML (ex: <code>hx-post</code>, <code>hx-target</code>). 
+                </p>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Isso simplifica a depuração para engenheiros de QA e desenvolvedores, pois a intenção de comportamento da tela está localizada exatamente onde ela é desenhada, evitando lógica espalhada em arquivos JS distantes.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

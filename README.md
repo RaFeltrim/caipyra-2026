@@ -16,8 +16,8 @@ Caipyra 2026/
 │   └── Palestra {N} - {Tema}/
 │       └── {Assunto} - Documentação completa ({Tipo}).txt
 ├── Apresentacao/                      # Slides e roteiro de apresentação sobre o evento
-│   ├── roteiro.md                     # Script de apoio para a apresentação
-│   └── slides.pdf                     # Slides finais da apresentação
+│   ├── Relatorio_Executivo_PDI_Caipyra_2026.html # Relatório executivo interativo e evidências
+│   └── site/                          # Site da Apresentação interativo (Flask/Tailwind/HTMX & Streamlit)
 ├── PDI/                               # Alinhamento das palestras com a sua carreira
 │   ├── roadmap_conexao.md             # Como aplicar os aprendizados nos objetivos de PDI
 │   ├── Rafael_Feltrim_CV.md           # Currículo profissional estruturado em inglês (ATS-optimized)
@@ -53,13 +53,8 @@ Para manter a consistência, cada diretório e arquivo possui um propósito defi
   * *Exemplo de Caminho 2:* `Documentações/Palestra 2 - Inteligência Artificial/LLMs locais com Ollama - Documentação completa (Workshop).txt`
 
 #### 3. Pasta `Apresentacao/`
-* **`roteiro.md`**: Documento de apoio descrevendo o roteiro da sua fala por slide.
-  * *Exemplo de Conteúdo:*
-    ```markdown
-    - Slide 1: Introdução (Falar sobre a importância do Caipyra 2026).
-    - Slide 2: Principais temas abordados (Resumo das tracks de Python e IA).
-    ```
-* **`slides.pdf`**: O arquivo final de slides exportado para visualização rápida.
+* **`Relatorio_Executivo_PDI_Caipyra_2026.html`**: Painel executivo interativo detalhando as tracks, PDI e conexões do evento.
+* **`site/`**: Diretório contendo o site completo em Flask (com templates responsivos em Tailwind/daisyUI e interações assíncronas HTMX) e um dashboard analítico em Streamlit.
 
 #### 4. Pasta `PDI/` (Plano de Desenvolvimento Individual)
 * **`roadmap_conexao.md`**: Conecta as palestras assistidas com as suas metas profissionais.

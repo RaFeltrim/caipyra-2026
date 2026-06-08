@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Caipyra 2026 & QA Studio{% endblock %}</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS & daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #cbd5e1;
+        }
+        h1, h2, h3, h4, .font-title {
+            font-family: 'Outfit', sans-serif;
+        }
+        /* Glassmorphism custom styling */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <div class="navbar glass-card border-b border-slate-800 px-6 sticky top-0 z-50">
+        <div class="flex-1">
+            <a href="/" class="btn btn-ghost text-xl text-white font-title font-bold tracking-tight">
+                🌾 Caipyra <span class="text-sky-400">2026</span>
+            </a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1 space-x-2 text-sm font-semibold text-slate-300">
+                <li><a href="/" class="hover:text-white transition-colors duration-150">Apresentação</a></li>
+                <li><a href="/mainframe" class="hover:text-white transition-colors duration-150">Mapeamento Mainframe</a></li>
+                <li><a href="/live-coding" class="hover:text-white transition-colors duration-150">Live-Coding (HTMX)</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto px-6 py-10">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-6 bg-slate-950 text-slate-500 text-xs border-t border-slate-900">
+        <aside>
+            <p>Caipyra 2026 ➔ QA Studio Foursys | Compartilhando conhecimento e promovendo a neurodiversidade.</p>
+            <p class="mt-1">Pessoas > Tecnologia</p>
+        </aside>
+    </footer>
+</body>
+</html>

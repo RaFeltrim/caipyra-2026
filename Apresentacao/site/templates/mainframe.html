@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Mapeamento de Mainframe - Caipyra 2026{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto space-y-10">
+    <!-- Header -->
+    <div class="space-y-3">
+        <span class="badge badge-accent badge-outline text-xs uppercase font-bold tracking-widest font-title">
+            Aliado de Automação & IA
+        </span>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white font-title">
+            Mapeamento e Automação de Mainframe
+        </h1>
+        <p class="text-slate-300 leading-relaxed">
+            Legados e sistemas de mainframe são vitais para muitas operações financeiras, mas complexos de testar e validar de forma ágil. Apresentamos um grande aliado para estruturar e mapear fluxos de mainframe, automatizando a engenharia reversa e auxiliando o time de QA Studio a modernizar suas automações.
+        </p>
+    </div>
+
+    <!-- Gemini Link Box -->
+    <div class="card bg-slate-900 border border-slate-800 shadow-xl overflow-hidden relative">
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl"></div>
+        <div class="card-body p-8 space-y-4">
+            <h2 class="card-title text-white font-title text-xl font-bold">🤖 Conheça o Mapeador Inteligente no Gemini</h2>
+            <p class="text-sm text-slate-300 leading-relaxed">
+                Você pode utilizar esta instância do Gemini especialmente configurada para analisar arquivos JCL, layouts de registro Copybook COBOL, fluxos VSAM e extrair cenários de teste automatizados em Python.
+            </p>
+            <div class="pt-2">
+                <a href="https://gemini.google.com/app/7c16b3363b152ba1?hl=pt-BR" target="_blank" class="btn btn-primary font-semibold shadow-lg shadow-blue-500/20">
+                    Acessar o Aliado Gemini para Mainframe
+                </a>
+            </div>
+            <p class="text-xs text-slate-500 italic">
+                *Nota: O link abrirá em uma nova aba. Certifique-se de estar conectado com sua conta Google corporativa ou pessoal para visualizar o prompt e a interface.
+            </p>
+        </div>
+    </div>
+
+    <!-- Interactive Simulator -->
+    <div class="glass-card rounded-2xl p-8 space-y-6">
+        <div class="space-y-1">
+            <h3 class="text-xl md:text-2xl font-bold text-white font-title">⚡ Simulador de Análise JCL / Copybook</h3>
+            <p class="text-sm text-slate-400">
+                Digite um trecho de JCL ou pergunte sobre um fluxo de mainframe para simular o retorno da inteligência artificial.
+            </p>
+        </div>
+
+        <form hx-post="/htmx/mainframe-prompt" hx-target="#mainframe-result" hx-indicator="#loading-prompt" class="space-y-4">
+            <div class="form-control">
+                <label class="label">
+                    <span class="label-text text-slate-300 font-medium">Prompt de Entrada</span>
+                </label>
+                <textarea name="prompt" rows="4" class="textarea textarea-bordered bg-slate-950/80 border-slate-700 focus:border-sky-500 focus:outline-none text-slate-200 font-mono text-sm leading-relaxed" placeholder="Ex: Analise o JCL que dispara o JOB QA01 e crie testes funcionais em Gherkin."></textarea>
+            </div>
+            
+            <div class="flex justify-between items-center">
+                <span class="text-xs text-slate-500 font-mono">Simulando LLM Cognitiva (Gemini)</span>
+                <button type="submit" class="btn btn-info font-bold px-6 shadow-md shadow-sky-500/10">
+                    Simular Análise de Estrutura
+                </button>
+            </div>
+        </form>
+
+        <div class="relative min-h-[100px] border border-dashed border-slate-800 rounded-xl p-5 bg-slate-950/30">
+            <!-- Loading Spinner -->
+            <div id="loading-prompt" class="htmx-indicator absolute inset-0 flex items-center justify-center bg-slate-950/50 rounded-xl">
+                <div class="flex flex-col items-center gap-2">
+                    <span class="loading loading-spinner loading-md text-sky-400"></span>
+                    <span class="text-xs text-sky-400 font-mono">Gemini está analisando o legado...</span>
+                </div>
+            </div>
+            
+            <div id="mainframe-result">
+                <p class="text-slate-500 text-center text-sm py-4">
+                    Aguardando envio do prompt para análise de código legado...
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

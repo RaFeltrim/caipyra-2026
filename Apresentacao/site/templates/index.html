@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Caipyra 2026: Pessoas > Tecnologia{% endblock %}
+
+{% block content %}
+<div class="space-y-12">
+    <!-- Hero Section -->
+    <div class="hero rounded-3xl overflow-hidden glass-card p-10 relative">
+        <!-- Background decorative blur glow -->
+        <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-blue-600/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-sky-500/10 blur-3xl pointer-events-none"></div>
+        
+        <div class="hero-content text-center flex-col max-w-4xl mx-auto space-y-6">
+            <span class="badge badge-info badge-outline px-4 py-3 text-xs uppercase tracking-widest font-bold font-title">
+                Foursys QA Studio & Caipyra 2026
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight font-title">
+                Pessoas <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">&gt;</span> Tecnologia
+            </h1>
+            <p class="text-slate-300 text-lg md:text-xl font-light leading-relaxed">
+                Compartilhando a bagagem e as inovações coletadas na USP São Carlos. O principal ativo do nosso time é a colaboração e a neurodiversidade; as ferramentas são as engrenagens que aceleram o nosso dia a dia.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/mainframe" class="btn btn-primary shadow-lg shadow-blue-500/20 font-semibold px-6">
+                    Acessar Mapeamento de Mainframe
+                </a>
+                <a href="/live-coding" class="btn btn-outline btn-info px-6">
+                    Ver Playground HTMX
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trilhas Grid -->
+    <div class="space-y-6">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white border-l-4 border-sky-400 pl-4 font-title">
+            Trilhas Técnicas e Evidências
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1: Airflow & Iceberg -->
+            <div class="card glass-card hover:border-slate-600 transition-all duration-300">
+                <figure class="px-5 pt-5 h-48 overflow-hidden">
+                    <img src="../Fotos/WhatsApp Image 2026-06-08 at 13.07.44.jpeg" alt="Orquestração" class="rounded-xl w-full h-full object-cover" />
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title text-white font-title text-xl font-bold">Orquestração Moderna (Airflow & Iceberg)</h3>
+                    <p class="text-sm text-slate-300">
+                        Como estruturar tabelas de alto desempenho em formato aberto analítico (Iceberg), com pipelines idempotentes no Airflow e rotinas automáticas de compactação de pequenos arquivos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: Dask Parallelism -->
+            <div class="card glass-card hover:border-slate-600 transition-all duration-300">
+                <figure class="px-5 pt-5 h-48 overflow-hidden">
+                    <img src="../Fotos/dask_scheduler_graph.png" alt="Dask Graph" class="rounded-xl w-full h-full object-cover" />
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title text-white font-title text-xl font-bold">Processamento Distribuído (Dask)</h3>
+                    <p class="text-sm text-slate-300">
+                        Paralelização de tarefas e manipulação de conjuntos massivos de dados em Python que ultrapassam a memória RAM local, otimizando processamento com grafos acíclicos direcionados (DAGs).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3: PyTorch -->
+            <div class="card glass-card hover:border-slate-600 transition-all duration-300">
+                <figure class="px-5 pt-5 h-48 overflow-hidden">
+                    <img src="../Fotos/WhatsApp Image 2026-06-08 at 13.07.46.jpeg" alt="PyTorch Model" class="rounded-xl w-full h-full object-cover" />
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title text-white font-title text-xl font-bold">Deep Learning e Python Fluente (PyTorch)</h3>
+                    <p class="text-sm text-slate-300">
+                        Construção de modelos com PyTorch aplicando boas práticas de clean code e orientação a objetos (usando ModulesDict e configs tipadas) ministrado pelos professores do ICMC-USP.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4: Playwright & Quality -->
+            <div class="card glass-card hover:border-slate-600 transition-all duration-300">
+                <figure class="px-5 pt-5 h-48 overflow-hidden">
+                    <img src="../Fotos/WhatsApp Image 2026-06-08 at 13.07.43.jpeg" alt="Quality" class="rounded-xl w-full h-full object-cover" />
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title text-white font-title text-xl font-bold">Resiliência em Automação (Playwright)</h3>
+                    <p class="text-sm text-slate-300">
+                        O uso de localizadores baseados em acessibilidade, tratamento nativo de abas e mocks de APIs de rede no Playwright para combater flaky tests em pipelines de testes funcionais.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HTMX Interactive Hub -->
+    <div class="glass-card rounded-2xl p-8 space-y-6">
+        <h3 class="text-xl md:text-2xl font-bold text-white font-title">
+            Central de Insights (Interatividade Server-Side)
+        </h3>
+        <p class="text-sm text-slate-300">
+            Clique nos tópicos abaixo para buscar informações detalhadas do servidor Flask de forma parcial via **HTMX** (sem reload de página).
+        </p>
+        
+        <div class="flex flex-wrap gap-2">
+            <button class="btn btn-sm btn-outline btn-primary" 
+                    hx-get="/htmx/qa-insight?type=playwright" 
+                    hx-target="#insight-container" 
+                    hx-indicator="#loading-insight">
+                Playwright Resiliente
+            </button>
+            <button class="btn btn-sm btn-outline btn-primary" 
+                    hx-get="/htmx/qa-insight?type=dask" 
+                    hx-target="#insight-container" 
+                    hx-indicator="#loading-insight">
+                Dask Paralelo
+            </button>
+            <button class="btn btn-sm btn-outline btn-primary" 
+                    hx-get="/htmx/qa-insight?type=people" 
+                    hx-target="#insight-container" 
+                    hx-indicator="#loading-insight">
+                Pessoas > Tecnologia
+            </button>
+        </div>
+
+        <div class="relative min-h-[140px] bg-slate-900/60 rounded-xl p-6 border border-slate-800">
+            <!-- Loading Indicator -->
+            <div id="loading-insight" class="htmx-indicator absolute inset-0 flex items-center justify-center bg-slate-950/40 rounded-xl">
+                <span class="loading loading-spinner loading-md text-sky-400"></span>
+            </div>
+            
+            <div id="insight-container">
+                <div class="text-center text-slate-500 py-6 text-sm font-medium">
+                    Selecione um tópico acima para carregar o insight técnico instantaneamente...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Streamlit Banner -->
+    <div class="alert bg-indigo-950/40 border border-indigo-800/60 rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div class="space-y-1 text-center sm:text-left">
+            <h4 class="font-bold text-white font-title text-lg">📈 Deseja rodar o simulador interativo de carga?</h4>
+            <p class="text-sm text-indigo-200">
+                Criamos um dashboard analítico em <strong>Streamlit</strong> que simula Gantt threads do Dask e volumes de testes no Snowflake/dbt.
+            </p>
+        </div>
+        <div class="text-center">
+            <code class="bg-indigo-950 border border-indigo-800 text-indigo-300 px-3 py-2 rounded-lg text-xs font-mono font-bold block mb-2">
+                streamlit run dashboard.py
+            </code>
+            <span class="text-xs text-indigo-400">Execute na pasta local do site</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

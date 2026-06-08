@@ -78,9 +78,6 @@ Este documento reúne todos os links úteis, materiais de estudo, documentaçõe
 
 ---
 
-## 🖼️ Acervo de Imagens Adicionais do Caipyra 2026
-- `1000723789.jpg` - Site de contagem regressiva oficial.
-- `1000723800.jpg` - Mascote da linguagem Python personalizado para o evento.
-- `1000723801.jpg` - Palco Fernão do ICMC-USP.
-- `1000723802.jpg` - Apresentação institucional da APyB (Associação Python Brasil).
-- `1000723129.jpg` - Networking e confraternização de encerramento do evento.
+## 🖼️ Acervo de Fotos do Caipyra 2026 (Pasta Fotos/)
+- O repositório contém 14 fotos registradas no evento e organizadas no diretório [Fotos/](file:///c:/Users/Rafael%20Feltrim/Downloads/Caipyra%202026/Fotos).
+- As fotos capturam momentos do palco principal no Auditório Fernão (ICMC-USP), slides técnicos das tracks de processamento massivo com Dask e orquestração de Lakehouses, painéis de discussão e momentos de networking/encerramento.

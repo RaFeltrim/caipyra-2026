@@ -1,0 +1,30 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: Desenvolvimento Web Moderno: Django e TDD
+PALESTRANTE: Orlando Saraiva Jr. & Renne Rocha
+TIPO: Palestra e Slides / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Esta documentação consolida os conceitos abordados nos materiais de Django e Test-Driven Development (TDD) disponibilizados no evento. Foca nas melhores práticas para construir aplicações web robustas, testáveis e de fácil manutenção utilizando o framework Django sob a ótica de desenvolvimento guiado por testes.
+
+2. CONCEITOS E PRÁTICAS RECOMENDADAS
+- Test-Driven Development (TDD) no Django:
+  * O ciclo clássico do TDD (Red-Green-Refactor) aplicado no desenvolvimento de APIs e views.
+  * Escrita de testes funcionais e unitários antes da lógica do negócio, garantindo que o design de código seja naturalmente desacoplado e focado nas especificações do produto.
+- Organização e Arquitetura de Testes:
+  * Utilização do pytest-django para simplificar e acelerar a suíte de testes.
+  * Mocking de integrações de rede e isolamento de banco de dados para evitar testes flutuantes (flaky tests).
+  * Separação rigorosa entre testes unitários rápidos e testes de integração de ponta a ponta (E2E).
+
+3. RECURSOS E LINKS ASSOCIADOS
+- Repositório no GitHub (Orlando Saraiva Jr.): https://github.com/orlandosaraivajr/caypira26
+- Slides da Palestra "Django aos 20" (Renne Rocha): https://git.rocha.dev.br/rennerocha/caipyra-2026-django-aos-20/src/branch/main/slides.pdf
+
+4. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- hard_skills: Django, Test-Driven Development (TDD), Arquitetura de Software.
+- Conexão Direta: O alinhamento com práticas modernas de desenvolvimento guiado por testes no ecossistema Django auxilia diretamente na refatoração e otimização dos projetos de backend do usuário. Contribui para o amadurecimento técnico em engenharia de software e apoia a preparação para as disciplinas do ICMC-USP (aluno especial) e para vagas internacionais na área de engenharia de software e dados.
+- Itens de Ação Relacionados:
+  * Refatoração do gestao_pedidos: A adoção dos padrões de teste apresentados servirá de base para garantir a estabilidade do backend durante o desacoplamento de dependências e refatoração para SOLID/Clean Architecture.

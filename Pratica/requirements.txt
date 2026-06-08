@@ -1,0 +1,17 @@
+# Caipyra 2026 — Dependências Python
+# Instalar: pip install -r requirements.txt
+# Playwright: playwright install chromium
+
+# Core
+requests>=2.32.0
+urllib3>=2.2.0
+
+# E2E Testing
+playwright>=1.44.0
+
+# Dev / CI
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+black>=24.4.0
+flake8>=7.0.0
+mypy>=1.10.0

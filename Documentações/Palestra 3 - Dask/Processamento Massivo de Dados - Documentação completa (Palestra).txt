@@ -1,0 +1,35 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: Dask para Processamento Massivo de Dados
+TIPO: Palestra / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Esta documentação reúne os principais aprendizados da palestra sobre o uso da biblioteca Dask para escalar a computação em Python. O foco da apresentação foi capacitar desenvolvedores a analisar conjuntos de dados que excedem o tamanho da memória RAM local por meio de processamento paralelo e distribuído.
+
+2. CONCEITOS E ARQUITETURA ABORDADOS
+- Computação Distribuída e Paralela: O Dask atua dividindo tarefas complexas em subtarefas menores e coordenando sua execução paralela de forma eficiente, seja em um computador pessoal com vários núcleos (multicore) ou em clusters com centenas de máquinas.
+- Task Scheduler (Agendador de Tarefas): O cérebro do Dask, responsável por construir Gráficos Acíclicos Direcionados (DAGs) de tarefas com base no código Python escrito pelo desenvolvedor e otimizar sua execução distribuída.
+- Coleções Familiares da API:
+  * Dask DataFrame: Interface que imita a API do Pandas, dividindo uma tabela gigante em vários pedaços menores (partições) processados de forma assíncrona.
+  * Dask Array: Paraleliza operações com arrays no estilo NumPy, trabalhando com arrays particionados em blocos (chunks).
+  * Dask Bag: Utilizado para coleções genéricas desestruturadas de objetos Python (como arquivos JSON brutos ou arquivos de log), funcionando como um map/filter paralelo.
+
+3. DASK VS. APACHE SPARK
+- Dask é nativo em Python, facilitando a depuração e garantindo integração perfeita com todo o ecossistema PyData (Scikit-Learn, Pandas, NumPy, SciPy).
+- O Spark é baseado em JVM (Java Virtual Machine), o que gera um overhead de serialização e desserialização ao passar dados para o ecossistema Python (PySpark).
+- O Dask oferece APIs de baixo nível muito flexíveis (como `dask.delayed`) que permitem paralelizar algoritmos customizados e complexos, enquanto o Spark é mais engessado em torno de sua engine estruturada SQL/DataFrames.
+
+4. MÍDIAS E LINKS ASSOCIADOS
+- Link Útil: https://share.google/OuivLpO4DLrGA6LOZ (Exemplos práticos de configuração do Scheduler e DAGs de tarefas)
+- Repositório grupy-dask (Edinho): https://codeberg.org/edinho/grupy-dask
+- Imagem Associada: 1000723591.jpg
+- Legenda da Imagem: Scheduler do Dask processando tarefas em paralelo.
+
+5. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- hard_skills: Processamento paralelo, otimização de performance, Python Avançado.
+- Conexão Direta: A habilidade de lidar com processamento massivo de dados de forma distribuída complementa as metas de modelagem de dados escaláveis para o Azure Data Engineering Team. Além disso, fornece uma base computacional forte para as disciplinas avançadas em Web/Mobile e Engenharia de Software no ICMC-USP.
+- Itens de Ação Relacionados:
+  * Orquestração de IA na CI/CD: A estrutura conceitual de escalonamento assíncrono do Dask e o processamento paralelo se assemelham ao design necessário para lidar com grandes massas de logs e resultados de testes em paralelo na esteira do Executive-QA-View.

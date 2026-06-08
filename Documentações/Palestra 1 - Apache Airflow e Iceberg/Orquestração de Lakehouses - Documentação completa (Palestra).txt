@@ -1,0 +1,31 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: Airflow no Legado Iceberg: Orquestração Moderna de Lakehouses
+TIPO: Palestra / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Este documento consolida os aprendizados da palestra sobre o gerenciamento de fluxos de dados complexos em arquiteturas Lakehouse modernas que utilizam Apache Iceberg como formato de tabela aberta, com foco especial no cenário de migração e convivência com sistemas legados usando o Apache Airflow.
+
+2. CONCEITOS E ARQUITETURA ABORDADOS
+- Apache Iceberg: Formato de tabela aberta de alto desempenho projetado para grandes volumes de dados analíticos. Oferece transações ACID, evolução de esquemas (schema evolution) sem efeitos colaterais e viagem no tempo (time travel).
+- Apache Airflow: Atua como a peça central de orquestração (Scheduler), gerenciando a dependência entre tarefas, retentativas automáticas, logs de execução e monitoramento em tempo real dos pipelines.
+- Arquitetura Lakehouse: Fusão das melhores características de Data Warehouses (estrutura, transações ACID) e Data Lakes (baixo custo, flexibilidade no armazenamento).
+- Gerenciamento de Legados: Desafios comuns no carregamento de tabelas legadas (como Hive ou Parquet não estruturado) e transição segura para o padrão gerenciado Iceberg sem indisponibilidade.
+
+3. PRÁTICAS RECOMENDADAS E EXECUÇÃO
+- Particionamento Dinâmico: Adoção do particionamento oculto (hidden partitioning) do Iceberg, que evita problemas de consulta errônea ao omitir filtros manuais em colunas de partição.
+- Compactação Automatizada (Compaction): DAGs do Airflow programadas para consolidar pequenos arquivos gerados em tempo de escrita frequente em arquivos maiores, otimizando o tempo de leitura para consultas analíticas subsequentes.
+- Tratamento de Falhas: Estruturação de DAGs idempontentes para que retentativas no Airflow não dupliquem dados nas tabelas Iceberg.
+
+4. MÍDIAS ASSOCIADAS
+- Imagem Associada: 1000723796.jpg
+- Legenda da Imagem: Gerenciamento de Lakehouse: Apache Airflow orquestrando dados no formato Iceberg.
+
+5. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- hard_skills: Orquestração resiliente e controle de fluxo de dados.
+- Conexão Direta: O entendimento de DAGs complexas e arquiteturas Lakehouse no Caipyra 2026 fornece base sólida para o desenvolvimento de pipelines robustos. Esse aprendizado contribui para a meta de transição de carreira para o Azure Data Engineering Team (onde conceitos de Data Lakehouse com Fabric são vitais) e reforça a orquestração e modularização exigidas no ICMC-USP.
+- Itens de Ação Relacionados:
+  * Orquestração de IA na CI/CD: O aprendizado de tratamento de falhas e idempotência no Airflow se conecta com a construção de gatilhos automáticos resilientes na esteira de triagem do Executive-QA-View.

@@ -1,0 +1,30 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: Construindo uma Cultura de Code Review
+PALESTRANTE: Renan de Assis Santos
+TIPO: Palestra e Slides / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Esta documentação detalha os aprendizados e melhores práticas discutidos sobre como construir e amadurecer a cultura de Code Review (revisão de código) nos times de engenharia. A apresentação destaca que o Code Review não deve ser um processo punitivo ou burocrático, mas sim um ritual de compartilhamento de conhecimento, alinhamento técnico e salvaguarda da qualidade do produto.
+
+2. DIRETRIZES E BOAS PRÁTICAS
+- Para o Autor do Pull Request (PR):
+  * Manter PRs pequenos e focados (alterações incrementais facilitam a revisão e reduzem a introdução de bugs).
+  * Escrever descrições detalhadas e estruturadas: contextualizar o problema, descrever a solução proposta, listar impactos e instruir como testar localmente.
+  * Utilizar checklists automatizados para garantir que lints, testes básicos e segurança foram validados antes de solicitar revisores humanos.
+- Para o Revisor:
+  * Praticar a empatia: realizar sugestões de melhoria com linguagem clara e construtiva, sem imposições dogmáticas.
+  * Focar em aspectos de alto nível: legibilidade, manutenibilidade, conformidade com a arquitetura geral do sistema e cobertura de testes.
+  * Delegar validações estáticas (sintaxe, formatação) para ferramentas de CI/CD, otimizando o tempo humano para discussões arquiteturais.
+
+3. RECURSOS E LINKS ASSOCIADOS
+- Slides da Palestra: https://github.com/renan-asantos/slides/blob/main/construindo-cultura-code-review/slides.pdf
+
+4. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- hard_skills: Cultura de Engenharia, Qualidade de Software, DevOps e Code Review.
+- Conexão Direta: O domínio de práticas eficientes de Code Review eleva o nível de maturidade do usuário em equipes de engenharia de software distribuídas. Esses conceitos apoiam diretamente o alinhamento com metodologias ágeis em ambientes corporativos internacionais, como os processos de contratação internacional da Microsoft e posições internacionais de liderança técnica.
+- Itens de Ação Relacionados:
+  * Pipeline de CI/CD no feltrim-agents-base: A automatização de validações pré-PR com ferramentas como linters e testes unitários estruturados melhora o fluxo de entrega contínua nos repositórios pessoais do usuário.

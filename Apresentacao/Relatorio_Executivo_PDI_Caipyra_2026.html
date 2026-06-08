@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caipyra 2026: Roadmap e PDI - Relatório Executivo</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --secondary: #2563eb;
+            --secondary-light: #3b82f6;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --bg-color: #0b0f19;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-color: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --gradient-dark: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        /* Ambient background glow */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(16px);
+            padding: 50px 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            color: #ffffff;
+            font-size: 2.8em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--text-muted);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .event-meta {
+            color: var(--accent);
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: #ffffff;
+            font-size: 1.8em;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary);
+            padding-left: 15px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            color: #ffffff;
+            margin-top: 0;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            color: var(--text-color);
+        }
+
+        .executive-summary {
+            background: var(--gradient-dark);
+            border-left: 4px solid var(--secondary);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 45px;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .executive-summary strong {
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1em;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .roadmap-card {
+            background: rgba(15, 23, 42, 0.5);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .roadmap-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+        }
+
+        .card-header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 0.8em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .tag-quality { background-color: rgba(16, 185, 129, 0.15); color: #34d399; }
+        .tag-ia { background-color: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+        .tag-arch { background-color: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+
+        .action-items {
+            margin-top: 20px;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 3px solid var(--success);
+        }
+
+        .action-items h4 {
+            color: var(--success);
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+
+        .action-items ul {
+            padding-left: 20px;
+            color: var(--text-color);
+        }
+
+        .action-items li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 40px;
+            padding: 25px;
+            background: var(--gradient-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            align-items: center;
+        }
+
+        .tech-stack strong {
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .tech-badge {
+            background-color: var(--primary-light);
+            border: 1px solid var(--border-color);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .image-section {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .image-card {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: border-color 0.3s ease;
+        }
+
+        .image-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 180px;
+            background-color: var(--primary-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            border: 1px dashed rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-wrapper::after {
+            content: '📷 Imagem: ' attr(data-img-name);
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 768px) {
+            .roadmap-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .card-full {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Caipyra 2026: Relatório Executivo</h1>
+            <p class="subtitle">Alinhamento Estratégico, Roadmap Tecnológico e PDI</p>
+            <p class="event-meta">São Carlos, SP | Trilhas de Escalabilidade e Qualidade</p>
+        </header>
+
+        <div class="executive-summary">
+            <strong>Resumo Executivo:</strong> A nossa participação no Caipyra 2026, sediado no ICMC-USP, foi focada na <strong>validação de arquiteturas e automações</strong>. Filtramos a grade do evento focando no que soluciona gargalos reais: instabilidade em esteiras de teste (flaky tests), modelagem moderna e governança de dados em Lakehouses e adoção de padrões rigorosos de desenvolvimento. Este relatório traduz a experiência do evento em planos de ação imediatos no Plano de Desenvolvimento Individual (PDI) e Roadmap tecnológico.
+        </div>
+
+        <h2>Roadmap & Metas do PDI (Matriz de Eisenhower)</h2>
+        <p>Abaixo estão as três principais frentes de desenvolvimento alinhadas com as prioridades e necessidades imediatas da empresa e da carreira.</p>
+
+        <div class="roadmap-grid">
+            <!-- PDI 1 -->
+            <div class="roadmap-card">
+                <div class="card-header-wrapper">
+                    <span class="card-tag tag-quality">Qualidade & Shift-Left</span>
+                </div>
+                <h3>Automação E2E Resiliente (Python + Playwright)</h3>
+                <p>Abordagem moderna para testes funcionais de ponta a ponta. Substitui dependências instáveis de drivers de terceiros (como Selenium) por testes nativos rápidos e isolados.</p>
+                <div class="action-items">
+                    <h4>Itens de Ação:</h4>
+                    <ul>
+                        <li>Migrar testes flutuantes do Selenium para Playwright (Python) na plataforma <a href="../Planejamento/leadflow-crm_planejamento.md" style="color: #34d399; text-decoration: underline;">leadflow-crm</a>.</li>
+                        <li>Estruturar suite de Shift-Left BDD com Gherkin.</li>
+                        <li>Meta: Mitigar falsos-negativos e acelerar a esteira CI/CD.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PDI 2 -->
+            <div class="roadmap-card">
+                <div class="card-header-wrapper">
+                    <span class="card-tag tag-ia">Orquestração & IA</span>
+                </div>
+                <h3>Orquestração e IA aplicada a CI/CD</h3>
+                <p>Desenvolvimento de esteiras com automação inteligente na triagem de logs de falhas. Integração com modelos cognitivos para categorização ágil de quebras de builds.</p>
+                <div class="action-items">
+                    <h4>Itens de Ação:</h4>
+                    <ul>
+                        <li>Implementar scripts em Python integrados com APIs de LLM.</li>
+                        <li>Consolidar relatórios de bugs e logs no <a href="../Planejamento/executive-qa-view-boilerplate_planejamento.md" style="color: #60a5fa; text-decoration: underline;">executive-qa-view-boilerplate</a>.</li>
+                        <li>Meta: Reduzir a triagem manual de falhas em até 60%.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PDI 3 -->
+            <div class="roadmap-card card-full">
+                <div class="card-header-wrapper">
+                    <span class="card-tag tag-arch">Arquitetura de Software</span>
+                </div>
+                <h3>Clean Architecture e SOLID (Base ICMC-USP)</h3>
+                <p>Nivelamento técnico para o ingresso em disciplinas de pós-graduação em Web e Mobile como aluno especial no ICMC-USP. Garantia de extensibilidade para produtos existentes.</p>
+                <div class="action-items">
+                    <h4>Itens de Ação:</h4>
+                    <ul>
+                        <li>Refatorar a aplicação <a href="../Planejamento/gestao_pedidos_planejamento.md" style="color: #fbbf24; text-decoration: underline;">gestao_pedidos</a> seguindo os pilares de Clean Architecture e SOLID.</li>
+                        <li>Padronizar os fluxos de consumo de APIs e injeção de dependências.</li>
+                        <li>Meta: Blindar a base de código do produto contra acoplamentos excessivos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <strong>Stack Tecnológica Validada:</strong>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Playwright</span>
+            <span class="tech-badge">Apache Airflow</span>
+            <span class="tech-badge">dbt (Snowflake)</span>
+            <span class="tech-badge">Dask</span>
+            <span class="tech-badge">PyTorch</span>
+        </div>
+
+        <section class="image-section">
+            <h2>Mapeamento de Evidências Visuais</h2>
+            <p>Referências fotográficas e imagens do evento salvas na pasta <code>Midia/</code> ou na mesma pasta deste relatório.</p>
+
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-wrapper" data-img-name="1000723801.jpg"></div>
+                    <figcaption>Palco do Auditório Fernão (ICMC-USP): Nossa base técnica acadêmica.</figcaption>
+                </div>
+                <div class="image-card">
+                    <div class="image-wrapper" data-img-name="1000723796.jpg"></div>
+                    <figcaption>Apache Airflow orquestrando dados em tabelas formatadas em Iceberg.</figcaption>
+                </div>
+                <div class="image-card">
+                    <div class="image-wrapper" data-img-name="1000723591.jpg"></div>
+                    <figcaption>Scheduler do Dask gerenciando o paralelismo de tarefas de carga.</figcaption>
+                </div>
+                <div class="image-card">
+                    <div class="image-wrapper" data-img-name="1000723670.jpg"></div>
+                    <figcaption>Estrutura e Clean Code práticos de redes neurais com PyTorch.</figcaption>
+                </div>
+            </div>
+        </section>
+
+        <section class="links-section" style="margin-top: 50px; padding-top: 40px; border-top: 1px solid var(--border-color);">
+            <h2>Materiais Complementares e Links do Evento</h2>
+            <p style="margin-bottom: 25px;">Referências, slides e repositórios oficiais compartilhados pelos palestrantes e participantes do Caipyra 2026:</p>
+            <div class="roadmap-grid">
+                <!-- Dask & Data Engineering -->
+                <div class="roadmap-card">
+                    <div class="card-header-wrapper">
+                        <span class="card-tag tag-arch">Computação Distribuída</span>
+                    </div>
+                    <h3>Engenharia de Dados & Dask</h3>
+                    <ul style="padding-left: 20px; margin-top: 15px;">
+                        <li style="margin-bottom: 10px; font-size: 0.95em;">
+                            <a href="https://codeberg.org/edinho/grupy-dask" target="_blank" style="color: #60a5fa; text-decoration: underline;">Repositório grupy-dask (Edinho)</a><br>
+                            <span style="color: var(--text-muted); font-size: 0.9em;">Exemplos práticos de paralelismo e computação de Dask DataFrames.</span>
+                        </li>
+                        <li style="margin-bottom: 10px; font-size: 0.95em;">
+                            <a href="http://gabu.bellon.me/links" target="_blank" style="color: #60a5fa; text-decoration: underline;">Portal de Links (Gabu Bellon)</a><br>
+                            <span style="color: var(--text-muted); font-size: 0.9em;">Biblioteca de links e ferramentas recomendadas do phData.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Django, TDD & Code Review -->
+                <div class="roadmap-card">
+                    <div class="card-header-wrapper">
+                        <span class="card-tag tag-quality">Qualidade & Testes</span>
+                    </div>
+                    <h3>Django, TDD e Code Review</h3>
+                    <ul style="padding-left: 20px; margin-top: 15px;">
+                        <li style="margin-bottom: 10px; font-size: 0.95em;">
+                            <a href="https://github.com/orlandosaraivajr/caypira26" target="_blank" style="color: #34d399; text-decoration: underline;">Repositório caypira26 (Orlando Saraiva Jr)</a><br>
+                            <span style="color: var(--text-muted); font-size: 0.9em;">Implementações sob metodologia TDD com Django.</span>
+                        </li>
+                        <li style="margin-bottom: 10px; font-size: 0.95em;">
+                            <a href="https://git.rocha.dev.br/rennerocha/caipyra-2026-django-aos-20/src/branch/main/slides.pdf" target="_blank" style="color: #34d399; text-decoration: underline;">Slides Django aos 20 (Renne Rocha)</a><br>
+                            <span style="color: var(--text-muted); font-size: 0.9em;">Evolução e desenvolvimento web com Django.</span>
+                        </li>
+                        <li style="margin-bottom: 10px; font-size: 0.95em;">
+                            <a href="https://github.com/renan-asantos/slides/blob/main/construindo-cultura-code-review/slides.pdf" target="_blank" style="color: #34d399; text-decoration: underline;">Slides Cultura de Code Review (Renan de Assis)</a><br>
+                            <span style="color: var(--text-muted); font-size: 0.9em;">Melhores práticas para rituais saudáveis e eficientes de revisão de código.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Geospatial AI & Google Earth Engine -->
+                <div class="roadmap-card card-full">
+                    <div class="card-header-wrapper">
+                        <span class="card-tag tag-ia">Geospatial AI</span>
+                    </div>
+                    <h3>Sensoriamento Remoto & Google Earth Engine</h3>
+                    <p style="margin-top: 10px; font-size: 0.95em; color: var(--text-muted);">Links e notebooks práticos compartilhados por Ádria Kanome:</p>
+                    <ul style="padding-left: 20px; margin-top: 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
+                        <li style="font-size: 0.95em;">
+                            <a href="https://developers.google.com/earth-engine" target="_blank" style="color: #fbbf24; text-decoration: underline;">Documentação Oficial do Google Earth Engine</a>
+                        </li>
+                        <li style="font-size: 0.95em;">
+                            <a href="https://geemap.org" target="_blank" style="color: #fbbf24; text-decoration: underline;">Documentação Oficial do geemap</a>
+                        </li>
+                        <li style="font-size: 0.95em;">
+                            <a href="https://link.springer.com/book/10.1007/978-3-030-92312-9" target="_blank" style="color: #fbbf24; text-decoration: underline;">Livro: Cloud-Based Remote Sensing (Springer)</a>
+                        </li>
+                        <li style="font-size: 0.95em;">
+                            Código JS: <a href="https://bit.ly/gee-caipyra" target="_blank" style="color: #fbbf24; text-decoration: underline;">bit.ly/gee-caipyra</a>
+                        </li>
+                        <li style="font-size: 0.95em;">
+                            Código Python: <a href="https://bit.ly/gee-python-caipyra" target="_blank" style="color: #fbbf24; text-decoration: underline;">bit.ly/gee-python-caipyra</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9em;">
+            <p>Relatório estruturado com base nos aprendizados consolidados do Caipyra 2026.</p>
+        </footer>
+    </div>
+</body>
+</html>

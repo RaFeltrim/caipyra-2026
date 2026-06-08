@@ -1,0 +1,39 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: Seu app precisa "memo" de Internet? Local-first com Reticulum Network
+PALESTRANTE: Fabricio Campos Zuardi
+TIPO: Palestra / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Esta palestra propõe uma reflexão crítica sobre a dependência constante de conectividade global (Internet) no desenvolvimento de software moderno. Utilizando a metáfora de uma "Quermesse" (onde a infraestrutura é analógica, local e resiliente), o palestrante apresenta o conceito de redes "Local-first" e introduz a Reticulum Network como uma stack alternativa baseada em identidades criptográficas.
+
+2. CONCEITOS E ARQUITETURA ABORDADOS
+- A Falácia da Conectividade Constante: A crítica ao modelo atual de "Software as a Service" (SaaS), onde uma falha na infraestrutura global paralisa operações estritamente locais.
+- Analogia do Correio Elegante: Redes de computadores que roteiam mensagens com base na identidade do destinatário (e não em endereços ou coordenadas físicas). A mensagem encontra o caminho de forma orgânica, passando por nós intermediários (multi-hop).
+- Reticulum Network:
+  * Uma "stack" de rede projetada para operar de forma descentralizada.
+  * Pilares: Identidade Criptográfica, Roteamento, Criptografia e Multi-hop.
+  * Não substitui a internet, mas oferece uma infraestrutura autônoma e resiliente para contextos onde a simplicidade, privacidade e proximidade são mais adequadas.
+
+3. CASOS DE USO E DEMONSTRAÇÃO
+- Demonstração Prática: Comunicação bem-sucedida entre um Laptop Linux (meshchat.app) e um Smartphone Android (columba.network) em uma rede local WiFi, sem conexão com a internet ou servidores centrais (AWS, Cloudflare).
+- Onde Aplicar:
+  * Hackerspaces e Comunidades Locais.
+  * Eventos (como o próprio Caipyra).
+  * IoT (Internet das Coisas).
+  * Cenários de Emergência (onde a infraestrutura tradicional cai).
+  * Conversas casuais do dia a dia (foco em privacidade nativa).
+
+4. CONCLUSÃO
+A adoção de arquiteturas "local-first" com ferramentas como o Reticulum permite construir aplicações mais robustas e autônomas. É um convite para os desenvolvedores questionarem o design de software e avaliarem quando a infraestrutura global é realmente necessária.
+
+5. REFERÊNCIAS CITADAS
+- Site Oficial: https://reticulum.network
+- Clientes compatíveis:
+  * Meshchat (https://github.com/liamcottle/reticulum-meshchat)
+  * Sideband (https://github.com/markqvist/sideband)
+  * Columba (https://columba.network/)
+- Comunidade: Grupo Shadowlink no Telegram (https://t.me/shadowlinkgroup)

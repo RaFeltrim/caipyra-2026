@@ -1,0 +1,35 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: Pytorch é Python Fluente (Deep Learning)
+PALESTRANTE: Moacir Antonelli Ponti
+TIPO: Palestra / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Esta aula ministrada por Moacir Antonelli Ponti destaca o desenvolvimento de modelos de Deep Learning utilizando o PyTorch sob o paradigma de um código idiomático, limpo e legível (Python Fluente). A apresentação foca na combinação de conceitos de engenharia de software com as estruturas matemáticas e de dados fornecidas pelo PyTorch.
+
+2. CONCEITOS E ARQUITETURA ABORDADOS
+- Paradigma Dinâmico do PyTorch: Uso da execução "eager" (imediata) e grafos dinâmicos definidos em tempo de execução. Isso permite usar estruturas condicionais padrão do Python (como loops if/for) e debugar facilmente com ferramentas nativas como pdb.
+- Python Fluente: Uso de recursos avançados do Python (classes e heranças limpas, métodos mágicos, decoradores, propriedades, geradores e tipagem de dados) para estruturar pipelines de treinamento legíveis e manuteníveis.
+- Estruturas Práticas Abordadas:
+  * Dataset e DataLoader: Classes padrão do PyTorch para carregamento modular, pré-processamento paralelo (com multiprocessing) e geração de lotes (batches) de dados.
+  * EventEncoder: Uso de encoders personalizados no PyTorch para lidar de forma vetorial e matricial com eventos temporais ou sequenciais, melhorando drasticamente o desempenho e a legibilidade do código de modelagem.
+  * nn.Module: Estrutura base para criação de redes neurais, onde cada camada e operação é definida e encadeada em conformidade com as melhores práticas de Clean Code.
+- Matemática Aplicada: Importância do alinhamento entre as formulações matemáticas das funções de perda (loss functions) e sua implementação eficiente usando operações vetorizadas em tensores do PyTorch (evitando loops manuais ineficientes).
+
+3. RECOMENDAÇÕES DE ENGENHARIA DE SOFTWARE PARA IA
+- Modularização do Treinamento: Separar a lógica do loop de treino, validação, definição de modelo e carga de dados em módulos Python distintos, evitando arquivos enormes do tipo notebook (.ipynb) de difícil manutenção.
+- Reprodutibilidade: Fixação rigorosa de seeds randômicas no NumPy, PyTorch e Python nativo para garantir a reprodutibilidade dos experimentos.
+
+4. MÍDIAS ASSOCIADAS
+- Imagem Associada: 1000723670.jpg
+- Legenda da Imagem: Arquitetura e código vivo com PyTorch.
+
+5. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- hard_skills: Python Avançado, Clean Architecture, Padrões de Projeto e Inteligência Artificial.
+- Conexão Direta: A aplicação de boas práticas de engenharia de software ao escrever modelos de IA (no caso, PyTorch) está intimamente ligada ao objetivo do usuário de atuar com soluções de IA (como Copilot Studio) e orquestrar modelos na esteira CI/CD. Também se conecta fortemente à futura participação do usuário como aluno especial de pós-graduação no ICMC-USP (onde o palestrante é professor adjunto!).
+- Itens de Ação Relacionados:
+  * Orquestração de LLMs/IA na CI/CD: O aprendizado de modularidade de código e tratamento de logs no PyTorch fornece as diretrizes para integrar de maneira limpa chamadas às APIs de LLMs (Claude, GPT, Gemini) nos pipelines de teste do Executive-QA-View.
+  * Refatoração de Arquitetura (MKP Manager e Agenda QA): A filosofia de "Python Fluente" e Clean Code orienta a refatoração do código legado do usuário para padrões de Clean Architecture e SOLID.

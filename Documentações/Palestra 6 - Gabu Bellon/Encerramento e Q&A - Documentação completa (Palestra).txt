@@ -1,0 +1,34 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: Encerramento e Q&A
+PALESTRANTE: Gabu Bellon (Lead Data Engineer na phData)
+TIPO: Palestra / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Esta sessão de encerramento do Caipyra 2026, conduzida por Gabu Bellon, reúne os principais insights gerados no evento, uma análise sobre o futuro das tecnologias de engenharia de dados (como Snowflake, Databricks, dbt e pipelines baseados em IA) e uma sessão de perguntas e respostas focada em carreira e evolução técnica na área de dados.
+
+2. CONCEITOS E DIRETRIZES TÉCNICAS
+- Tendências em Engenharia de Dados:
+  * O papel das consultorias globais (como a phData, parceira elite de Snowflake e Databricks) no desenho de arquiteturas robustas em nuvem para grandes empresas internacionais.
+  * A crescente necessidade de integrar modelos de IA Generativa de forma governada no ciclo de vida dos dados corporativos.
+- Importância do Networking e do Compartilhamento de Conhecimento:
+  * Como participar ativamente de eventos de tecnologia abre portas para posições estratégicas e consultoria internacional.
+  * A recomendação de manter repositórios públicos atualizados com documentação detalhada (como este repositório de aprendizados do Caipyra) e códigos funcionais para demonstrar domínio prático.
+
+3. SESSÃO DE PERGUNTAS E RESPOSTAS (Q&A)
+- Carreira e Transição: O que o mercado global busca em engenheiros de dados modernos (combinação de forte base em SQL, linguagens de programação como Python/Scala, infraestrutura em nuvem e orquestração).
+- Processamento em Tempo Real vs. Batch: Discussão sobre quando adotar cada abordagem, reforçando que o processamento batch bem orquestrado ainda é o padrão ideal para 90% dos problemas de negócios devido ao menor custo e complexidade de manutenção.
+
+4. MÍDIAS E LINKS ASSOCIADOS
+- Link Útil: http://gabu.bellon.me/links (Portal de links úteis, materiais de estudo e referências recomendadas pelo Gabu Bellon)
+- Imagem Associada: 1000723794.jpg
+- Legenda da Imagem: Encerramento e sessão de Q&A.
+
+5. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- hard_skills: Engenharia de Dados e Carreira em Tecnologia.
+- Conexão Direta: A atuação do palestrante como Lead Data Engineer em uma empresa global (phData) serve como uma referência real de sucesso profissional para os objetivos do usuário. Os conceitos discutidos alinham-se perfeitamente com a transição de carreira para o Azure Data Engineering Team da Microsoft, oferecendo diretrizes claras sobre quais habilidades dominar (como modelagem de dados moderna com dbt e gerenciamento de infraestrutura).
+- Itens de Ação Relacionados:
+  * Resolução do Voucher AB-620: O conselho do Gabu sobre focar em certificações e documentar o conhecimento apoia a ação do usuário de resolver o problema do voucher com a Microsoft para obter a credencial Beta AB-620 e destacar-se nos processos seletivos.

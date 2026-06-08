@@ -1,0 +1,33 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+TUTORIAL: Google Earth Engine (GEE) & Python
+PALESTRANTE: Ádria Kanome
+TIPO: Tutorial / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Esta documentação reúne as informações e recursos compartilhados no tutorial prático sobre a utilização da API do Google Earth Engine (GEE) em conjunto com a linguagem Python para processamento distribuído de dados de sensoriamento remoto e inteligência geoespacial (Geospatial AI). O foco do tutorial foi demonstrar a transição entre o console Javascript clássico do GEE e fluxos de trabalho nativos e automatizados em Python.
+
+2. CONCEITOS E FERRAMENTAS ABORDADAS
+- Google Earth Engine (GEE):
+  * Plataforma baseada em nuvem projetada para processamento de petabytes de dados de imagens de satélite e observações geoespaciais em escala global.
+  * O processamento ocorre diretamente na infraestrutura do Google, permitindo que análises complexas rodem em segundos de forma paralela e otimizada.
+- geemap:
+  * Uma biblioteca em Python desenvolvida para visualização interativa e mapeamento de dados do Earth Engine.
+  * Integra perfeitamente o GEE com Jupyter Notebooks, permitindo criar mapas interativos, plotar gráficos e realizar manipulações espaciais ricas de forma simplificada em Python.
+- Integração e Automação:
+  * Portabilidade de código Javascript do Code Editor do GEE para fluxos de scripts e notebooks Python funcionais.
+  * Criação de dashboards geográficos interativos e pipelines automatizados de detecção de mudanças e análise de séries temporais de imagens.
+
+3. RECURSOS E LINKS COMPLEMENTARES
+- Documentação Oficial do Google Earth Engine (GEE): https://developers.google.com/earth-engine
+- Documentação Oficial da Biblioteca geemap: https://geemap.org
+- Livro de Referência: Cloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications (Springer)
+- Códigos em Javascript (direto na plataforma GEE): bit.ly/gee-caipyra
+- Códigos em Python (Notebooks práticos): bit.ly/gee-python-caipyra
+
+4. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- hard_skills: Sensoriamento Remoto, Inteligência Geoespacial, Python Científico, Engenharia de Dados.
+- Conexão Direta: O processamento de dados geoespaciais de escala massiva oferece um caso de uso avançado em Big Data. O entendimento dessa arquitetura em nuvem (onde os cálculos pesados ocorrem em clusters distribuídos do Google Engine) alinha-se com a meta profissional de arquitetura de pipelines de alta performance e uso eficiente de poder de computação em nuvem, destacando o perfil do usuário em processos seletivos internacionais (onde Geospatial AI e engenharia de dados científicos possuem alto valor de mercado).

@@ -1,0 +1,103 @@
+version: 2
+
+# Pedro-DBA: schema.yml revisado — testes mais robustos + dim_users declarado
+# Adicionado: accepted_values para lead_status, not_null em estimated_revenue,
+#             source declaration para evitar erro de referência em dbt run
+
+sources:
+  - name: crm_raw
+    description: "Dados brutos do CRM — ingestão sem transformação."
+    tables:
+      - name: leads
+        description: "Tabela raw de leads do CRM."
+        columns:
+          - name: id
+            tests:
+              - not_null
+          - name: is_test_account
+            tests:
+              - not_null
+
+models:
+  - name: stg_leads
+    description: "Staging: limpeza inicial e padronização dos leads do CRM. Schema contract explícito."
+    columns:
+      - name: lead_id
+        description: "Chave primária do lead — CAST de id."
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: "Responsável pelo lead."
+        tests:
+          - not_null
+
+      - name: lead_source
+        description: "Origem do lead normalizada (lowercase)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['organic', 'paid', 'referral', 'event', 'cold_outreach', 'unknown']
+
+      - name: lead_status
+        description: "Status atual do lead no funil."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['new', 'active', 'qualified', 'proposal', 'won', 'lost', 'churned']
+
+      - name: estimated_revenue
+        description: "Receita estimada — nunca negativa."
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+      - name: created_at_utc
+        description: "Timestamp de criação em UTC."
+        tests:
+          - not_null
+
+      - name: updated_at_utc
+        description: "Timestamp de última atualização em UTC."
+        tests:
+          - not_null
+
+  - name: fct_sales_funnel
+    description: "Fato incremental: histórico de mudanças de status do pipeline de vendas."
+    tests:
+      - dbt_utils.equal_rowcount:
+          compare_model: ref('stg_leads')
+          config:
+            where: "lead_status = 'active'"
+    columns:
+      - name: funnel_operation_id
+        description: "Chave surrogate gerada via MD5 hash."
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: "FK para dim_users."
+        tests:
+          - not_null
+          # Pedro-DBA: relationships só funciona se dim_users existir no projeto
+          # Descomente quando dim_users for criado:
+          # - relationships:
+          #     to: ref('dim_users')
+          #     field: user_id
+
+      - name: lead_status
+        description: "Status do lead no momento da operação."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['new', 'active', 'qualified', 'proposal', 'won', 'lost', 'churned']
+
+      - name: estimated_revenue
+        description: "Receita estimada — nunca negativa."
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"

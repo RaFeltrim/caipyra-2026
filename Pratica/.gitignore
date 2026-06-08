@@ -1,0 +1,35 @@
+# Caipyra 2026 — Git Ignore
+# Camila-DevOps: .env nunca entra no Git
+
+# Ambiente Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Variáveis de ambiente (NUNCA comitar)
+.env
+.env.*
+!.env.example
+
+# Testes e artefatos temporários
+.pytest_cache/
+htmlcov/
+.coverage
+*.log
+evaluation_report.json
+falha_e2e_trace.png
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

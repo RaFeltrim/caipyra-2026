@@ -1,0 +1,35 @@
+================================================================================
+EVENTO: CAIPYRA 2026
+LOCAL: ICMC-USP, SÃO CARLOS, SP
+DATA: 04 A 07 DE JUNHO DE 2026
+PALESTRA: Ecossistema Téo Me Why: Comunidade e Educação em Dados
+PALESTRANTE: Téo Calvo (@teomewhy)
+TIPO: Palestra / Documentação Completa
+================================================================================
+
+1. VISÃO GERAL
+Esta palestra apresenta a estrutura de aprendizado do Ecossistema Téo Me Why, uma iniciativa comunitária de educação que visa democratizar e acelerar a capacitação de profissionais na área de Engenharia, Ciência e Análise de Dados e Inteligência Artificial.
+
+2. CONCEITOS E ARQUITETURA ABORDADOS
+- Aprendizado Baseado em Comunidade (Community-Driven Learning): Aceleração profissional através de mentoria coletiva, compartilhamento de desafios reais do mercado e colaboração em projetos de código aberto.
+- Plataforma de Cursos Téo Me Why: Estrutura curricular focada na prática e desenvolvimento de projetos reais.
+- Tecnologias e Disciplinas Abordadas no Ecossistema:
+  * Linguagens e Controle: Python Avançado, SQL, Git/GitHub.
+  * Engenharia e Transformação: dbt, Spark, Apache Airflow.
+  * Bancos de Dados Modernos: Snowflake, Databricks.
+  * Inteligência Artificial e MLOps: Integração de LLMs e modelos preditivos em pipelines de produção.
+
+3. ESTRATÉGIAS DE ENTRADA NO MERCADO E EVOLUÇÃO
+- O ecossistema enfatiza o aprendizado por meio de portfólios práticos e documentação ativa do conhecimento (como criar resumos e repositórios detalhados do que está sendo estudado).
+- Fomento ao networking local e nacional para preencher vagas abertas no mercado de dados por meio de indicações internas da comunidade.
+
+4. MÍDIAS E LINKS ASSOCIADOS
+- Link Útil: https://cursos.teomewhy.org/ (Plataforma oficial de cursos e comunidade do Téo Me Why)
+- Imagem Associada: 1000723607.jpg
+- Legenda da Imagem: Apresentação do ecossistema Téo Me Why.
+
+5. CONEXÃO COM O PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
+- hard_skills: Engenharia de Dados, Ecossistema Python de Dados.
+- Conexão Direta: O ecossistema de cursos do Téo Me Why fornece uma trilha estruturada que alinha perfeitamente com os objetivos do usuário de dominar tecnologias como SQL, dbt e Snowflake. Isso acelera a preparação técnica para a meta de transição de carreira para o Azure Data Engineering Team (onde a modelagem de dados e conceitos analíticos do Snowflake/Databricks são altamente transferíveis para o Microsoft Fabric e Azure Synapse).
+- Itens de Ação Relacionados:
+  * Refatoração de Arquitetura: As trilhas de boas práticas do ecossistema reforçam o desenvolvimento orientado a código limpo, ajudando nas disciplinas do ICMC-USP e nas refatorações de código no Agenda QA e MKP Manager.

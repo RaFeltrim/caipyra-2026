@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "caipyra-2026-pratica"
+version = "0.1.0"
+description = "Implementações práticas dos aprendizados do Caipyra 2026"
+authors = ["Rafael Feltrim"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32"
+urllib3 = "^2.2"
+playwright = "^1.44"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2"
+pytest-asyncio = "^0.23"
+black = "^24.4"
+flake8 = "^7.0"
+mypy = "^1.10"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
